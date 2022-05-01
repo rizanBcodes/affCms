@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include ('./partials/head') %>
+
+    <body>
+        <%- include ('./partials/nav') %>
+            <% if (blogs.length> 0) { %>
+                <% blogs.forEach(blog=> { %>
+                    <div class="content">
+                        <a class="singlePost" href="/<%= blog.slug %>">
+                            <h2>
+                                <%= blog.title %>
+                            </h2>
+                            <p>
+                                <%= blog.description%>
+                            </p>
+                        </a>
+                    </div>
+                    <% }); %>
+                        <% } else { %>
+                            <p>There are no posts to show!</p>
+                            <% } %>
+
+                                <%- include ('./partials/footer') %>
+    </body>
+
+</html>
