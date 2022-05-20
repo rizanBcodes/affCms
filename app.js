@@ -13,8 +13,14 @@ app.set(
 
 app.use(express.static('public'));
 
-connection.connect();
 
+connection.connect((err) => {
+    if (err) {
+      console.log("Database Connection Failed !!!", err);
+    } else {
+      console.log("connected to Database");
+    }
+});
 
 app.listen(port);
 
