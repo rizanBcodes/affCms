@@ -43,10 +43,12 @@ const addPostRouteController = (req, res) => {
       `select * from blogs where slug='${slug}'`,
       (error, results) => {
         if (error) console.log(error);
-        res.render("details", {
+        res.render("details", 
+        {
           title: results[0].title,
           description: results[0].description,
-        });
+        }
+        );
       }
     );
   };
