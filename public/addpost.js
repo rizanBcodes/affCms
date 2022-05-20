@@ -13,6 +13,7 @@ function clearForm() {
     clearInvalidTitleMessage();
     postDescr.value = '';
     clearInvalidDescriptionMessage();
+    postSlug.value = '';
 }
 
 function postSubmitted() {
@@ -44,6 +45,7 @@ form.addEventListener('submit', (event) => {
     event.preventDefault();
     let postTitle = document.getElementById('postTitle').value;
     let postDescr = document.getElementById('postDescr').value;
+    let postSlug = document.getElementById('postSlug').value;
 
     if (postTitle == '' && postDescr == '') {
         shoutInvalidTitle();
