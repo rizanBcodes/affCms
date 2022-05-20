@@ -36,7 +36,7 @@ const addPostRouteController = (req, res) => {
     });
   };
 
-  const SlugController = (req, res) => {
+  const slugController = (req, res) => {
     console.log("inside :slug route");
     slug = req.params.slug;
     connection.query(

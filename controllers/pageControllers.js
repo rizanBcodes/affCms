@@ -1,5 +1,5 @@
 const ejs = require("ejs");
-const connection = require("./database.js");
+const connection = require("../database.js");
 const bodyParser = require("body-parser");
 var urlencodedParser = bodyParser.urlencoded({ extended: false });
 

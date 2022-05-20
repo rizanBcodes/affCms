@@ -14,7 +14,7 @@ app.use(express.static("public"));
 
 connection.connect((err) => {
   if (err) {
-    console.log("Database Connection Failed !!!", err);
+    console.log("db connection has been refused, this is the error message:", err.message);
   } else {
     console.log("connected to Database");
   }
